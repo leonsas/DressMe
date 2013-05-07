@@ -11,59 +11,103 @@
 		<link href="assets/css/bootstrap.css" rel="stylesheet" media="screen">
 		<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 		<style type="text/css">
+			/* Sticky footer styles
+			 -------------------------------------------------- */
 
+			html, body {
+				height: 100%;
+				/* The html and body elements cannot have any padding or margin. */
+			}
 
-     	 /* Sticky footer styles
-     	 -------------------------------------------------- */
-	
-	     	 html,
-	     	 body {
-	     	   height: 100%;
-	     	   /* The html and body elements cannot have any padding or margin. */
-	     	 }
-	
-	     	 /* Wrapper for page content to push down footer */
-	     	 #wrap {
-	     	   min-height: 100%;
-	     	   height: auto !important;
-	     	   height: 100%;
-	     	   /* Negative indent footer by it's height */
-	     	   margin: 0 auto -60px;
-	     	 }
-	
-	     	 #wrap > .container {
-	     	   padding-top: 60px;
-	     	 }
-	
+			/* Wrapper for page content to push down footer */
+			#wrap {
+				min-height: 100%;
+				height: auto !important;
+				height: 100%;
+				/* Negative indent footer by it's height */
+				margin: 0 auto -60px;
+			}
 
-
+			#wrap > .container {
+				padding-top: 60px;
+			}
 
 		</style>
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 		<script src="assets/js/jquery.cookie.js"></script>
 		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/purl.js"></script>
 		<script src="assets/js/main.js"></script>
 	</head>
 
 	<body>
-	<div id="wrap">
-	<div class="navbar navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container">
-				<a class="brand" href="#">Dress Me</a>				
+		<div id="wrap">
+			<div class="navbar navbar-fixed-top">
+				<div class="navbar-inner">
+					<div class="container">
+						<a class="brand" href="#">Dress Me</a>
+					</div>
+				</div>
 			</div>
-		</div>
-	</div>
-		
-	<div class="container">
-		<button id="Business" class="btn btn-large btn-block btn-inverse" type="button">Business</button>
-		<button id="Going Out" class="btn btn-large btn-block btn-inverse" type="button">Going Out</button>
-		<button id="Working Out" class="btn btn-large btn-block btn-inverse" type="button">Working Out</button>
-		<button id="Traveling" class="btn btn-large btn-block btn-inverse" type="button">Traveling</button>
-	</div>
-	
 
-	</div>
+			<div class="container">
+			
+
+				<div class="accordion" id="categories_accordion">
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#categories_accordion" href="#business_collapsible">Business </a>
+						</div>
+						<div id="business_collapsible" class="accordion-body collapse in">
+							<div class="accordion-inner">
+								<a href="suggestion.html?category=business&event=interview" class="btn">Interview</a>
+								<a href="suggestion.html?category=business&event=meeting" class="btn">Meeting with peers</a>
+								<a href="suggestion.html?category=business&event=casual" class="btn">Casual</a>
+								<a href="suggestion.html?category=business&event=happy" class="btn">Happy hour</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#categories_accordion" href="#going_out_collapsible">Going Out </a>
+						</div>
+						<div id="going_out_collapsible" class="accordion-body collapse">
+							<div class="accordion-inner">
+								<a href="suggestion.html?category=goingout&event=date" class="btn">Dinner Date</a>
+								<a href="suggestion.html?category=goingout&event=clubbing" class="btn">Clubbing</a>
+								<a href="suggestion.html?category=goingout&event=semiformal" class="btn">Semi-formal</a>
+								<a href="suggestion.html?category=goingout&event=bar" class="btn">Bar hopping</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#categories_accordion" href="#working_out_collapsible">Working Out </a>
+						</div>
+						<div id="working_out_collapsible" class="accordion-body collapse">
+							<div class="accordion-inner">
+								<a href="suggestion.html?category=athletic&event=gym" class="btn">Gym workout</a>
+								<a href="suggestion.html?category=athletic&event=outdoor" class="btn">Outdoor</a>
+							
+							</div>
+						</div>
+					</div>
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#categories_accordion" href="#traveling_collapsible">Traveling</a>
+						</div>
+						<div id="traveling_collapsible" class="accordion-body collapse">
+							<div class="accordion-inner">
+								<a href="suggestion.html?category=traveling&event=beach" class="btn">Beach</a>
+								<a href="suggestion.html?category=traveling&event=skiing" class="btn">Skiing</a>
+			
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
 	</body>
 
 </html>

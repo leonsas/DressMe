@@ -11,59 +11,58 @@
 		<link href="assets/css/bootstrap.css" rel="stylesheet" media="screen">
 		<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 		<style type="text/css">
+			/* Sticky footer styles
+			 -------------------------------------------------- */
 
+			html, body {
+				height: 100%;
+				/* The html and body elements cannot have any padding or margin. */
+			}
 
-      /* Sticky footer styles
-      -------------------------------------------------- */
+			/* Wrapper for page content to push down footer */
+			#wrap {
+				min-height: 100%;
+				height: auto !important;
+				height: 100%;
+				/* Negative indent footer by it's height */
+				margin: 0 auto -60px;
+			}
 
-      html,
-      body {
-        height: 100%;
-        /* The html and body elements cannot have any padding or margin. */
-      }
-
-      /* Wrapper for page content to push down footer */
-      #wrap {
-        min-height: 100%;
-        height: auto !important;
-        height: 100%;
-        /* Negative indent footer by it's height */
-        margin: 0 auto -60px;
-      }
-
-      /* Lastly, apply responsive CSS fixes as necessary */
-      @media (max-width: 767px) {
-        #footer {
-          margin-left: -20px;
-          margin-right: -20px;
-          padding-left: 20px;
-          padding-right: 20px;
-        }
-      }
+			/* Lastly, apply responsive CSS fixes as necessary */
+			@media (max-width: 767px) {
+				#footer {
+					margin-left: -20px;
+					margin-right: -20px;
+					padding-left: 20px;
+					padding-right: 20px;
+				}
+			}
 
 		</style>
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 		<script src="assets/js/jquery.cookie.js"></script>
 		<script src="assets/js/bootstrap.min.js"></script>
-		<script src="assets/js/main.js"></script>
+		<script src="assets/js/suggestion.js"></script>
 	</head>
 
 	<body>
-	<div id="wrap">
-	<div class="navbar navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container">
-				<a class="brand" href="#">Dress Me</a>				
-			</div>
-		</div>
-	</div>
-		
-	<div class="container">
-		
-		
-	</div>
+		<div id="wrap">
+			<div class="navbar navbar-fixed-top">
+				<div class="navbar-inner">
+					<a class="brand" href="#">Dress Me</a>
+				</div>
+					<div class="container">
+						
+						<p id="suggestion_text">
 
-</div>
+						</p>
+					</div>
+				
+			</div>
+
+			
+
+		</div>
 	</body>
 
 </html>
