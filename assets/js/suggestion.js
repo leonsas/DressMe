@@ -189,7 +189,7 @@ function displayWeatherAccesories(currentTemp, icon_type) {
 		}
 	}
 	console.log("accessory: " + accessory)
-	if (accessory != '' || accessory != undefined) {
+	if (accessory != '') {
 		if (currentTemp > 61) {
 			accessory_string = accessory;
 		} else {
