@@ -152,8 +152,10 @@ $(function() {
 			success : function(data) {
 				console.log(data);
 				currentTemp = Math.round(data.currently.temperature);
+				$("#current_feels_like").text('Feels like ' + currentTemp + '\u00B0 F');
 				icon_type = data.daily.icon;
 				displayWeatherAccesories(currentTemp, icon_type);
+
 			}
 		});
 
