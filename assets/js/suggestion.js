@@ -2,7 +2,7 @@ function getURLParameter(name) {
 	return decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]);
 }
 
-suggestions = [{
+suggestions_data = [{
 	category : "business",
 	event : "interview",
 	title : "Business > Interview",
@@ -173,43 +173,9 @@ $(function() {
 
 	};
 
-	category = getURLParameter('category');
-	event = getURLParameter('event');
-
-	for (i in suggestions) {
-
-		if (suggestions[i].category == category && suggestions[i].event == event) {
-			current_suggestions = suggestions[i].suggestions;
-			title = suggestions[i].title;
-			$("#suggestion_text").html("You could wear a " + current_suggestions[0] + ".");
-			$('#category').html(title);
-		}
-
-	}
-
+	
+	displaySuggestion()
 	getGeoLocation();
 });
 
-function displayWeatherAccesories(currentTemp, icon_type) {
-	console.log(currentTemp);
-	category = getURLParameter('category');
-	var accessory = '';
-	for (i in temperature_accesories) {
-		if (currentTemp >= temperature_accesories[i].temp_range[0] && currentTemp < temperature_accesories[i].temp_range[1]) {
-			console.log(i + " " + currentTemp);
-			console.log(category);
-			console.log(temperature_accesories[i]);
-			accessory = temperature_accesories[i].suggestion[category];
-			break;
-		}
-	}
-	console.log("accessory: " + accessory)
-	if (accessory != '' && accessory != undefined) {
-		if (currentTemp > 61) {
-			accessory_string = accessory;
-		} else {
-			accessory_string = "Don't forget your " + accessory + "!";
-		}
-		$('#weather_accessory_suggestion').html(accessory_string);
-	}
-};
+
