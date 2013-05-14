@@ -5,59 +5,71 @@ function getURLParameter(name) {
 suggestions = [{
 	category : "business",
 	event : "interview",
+	title : "Business > Interview",
 	suggestions : ["button-down shirt, dress pants, dress shoes", "gray suit, tie, dress shoes"]
 }, {
 	category : "business",
 	event : "meeting",
+	title : "Business > Meeting with Peers",
 	suggestions : ["button-down shirt, jeans, sneakers", "button-down shirt, khakis, sneakers"]
 }, {
 	category : "business",
 	event : "casual",
+	title : "Business > Casual",
 	suggestions : ["t-shirt, jeans, sneakers", "button-down shirt, jeans, sneakers", "t-shirt, shorts, sneakers"]
 
 }, {
 	category : "business",
 	event : "happy",
+	title : "Business > Happy Hour",
 	suggestions : [" t-shirt, jeans, leather shoes", " button-down shirt, jeans, leather shoes", "button-down shirt, jeans, leather shoes"]
 
 }, {
 	category : "goingout",
 	event : "date",
+	title: "Going Out > Date",
 	suggestions : [" button-down shirt, dress pants, leather shoes"]
 
 }, {
 	category : "goingout",
 	event : "clubbing",
+	title: "Going Out > Clubbing",
 	suggestions : ["polo shirt, belt, jeans, street sneakers"]
 
 }, {
 	category : "goingout",
 	event : "semiformal",
+	title: "Going Out > Semi-Formal",
 	suggestions : ["button-down shirt, khakis, boat shoes"]
 
 }, {
 	category : "goingout",
 	event : "bar",
+	title: "Going Out > Bar Hopping",
 	suggestions : [" button-down shirt, jeans, sneakers", "button-down shirt, khakis, sneakers", "t-shirt, khakis, sneakers"]
 
 }, {
 	category : "athletic",
 	event : "gym",
+	title: "Working Out > Gym",
 	suggestions : ["t-shirt, shorts, gym shoes"]
 
 }, {
 	category : "athletic",
 	event : "outdoor",
+	title: "Working Out > Outdooor",
 	suggestions : ["t-shirt, shorts, gym shoes"]
 
 }, {
 	category : "traveling",
 	event : "beach",
+	title: "Traveling > Beach",
 	suggestions : ["t-shirt, swim trunks, sunglasses, flip-flops"]
 
 }, {
 	category : "traveling",
 	event : "skiing",
+	title: "Traveling > Skiing",
 	suggestions : ["hat, ski-jacket, gloves, snow pants, ski boots"]
 
 }]
@@ -152,8 +164,10 @@ $(function() {
 			success : function(data) {
 				console.log(data);
 				currentTemp = Math.round(data.currently.temperature);
+				$("#current_feels_like").text('Feels like ' + currentTemp + '\u00B0 F');
 				icon_type = data.daily.icon;
 				displayWeatherAccesories(currentTemp, icon_type);
+
 			}
 		});
 
@@ -166,8 +180,9 @@ $(function() {
 
 		if (suggestions[i].category == category && suggestions[i].event == event) {
 			current_suggestions = suggestions[i].suggestions;
+			title = suggestions[i].title;
 			$("#suggestion_text").html("You could wear a " + current_suggestions[0] + ".");
-
+			$('#category').html(title);
 		}
 
 	}
@@ -189,7 +204,7 @@ function displayWeatherAccesories(currentTemp, icon_type) {
 		}
 	}
 	console.log("accessory: " + accessory)
-	if (accessory != '') {
+	if (accessory != '' && accessory != undefined) {
 		if (currentTemp > 61) {
 			accessory_string = accessory;
 		} else {
