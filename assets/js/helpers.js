@@ -8,7 +8,7 @@ function getSuggestionParams(){
 function generateSuggestions(category, event){
 		for (i in suggestions_data) {
 
-		if (suggestions_data[i].category == suggestion_params.category && suggestions_data[i].event == suggestion_params.event) {
+		if (suggestions_data[i].category == category && suggestions_data[i].event == event) {
 			current_suggestions = suggestions_data[i].suggestions;
 			title = suggestions_data[i].title;
 			return {suggestions: current_suggestions, title: title}
