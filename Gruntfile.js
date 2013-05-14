@@ -19,7 +19,10 @@ module.exports = function (grunt) {
   
   grunt.loadNpmTasks('grunt-contrib-qunit');
     gruntConfig.qunit = {
-        src: ['tests.html']
+         options: {
+            urls: [
+              'http://localhost:8000/tests/tests.html',
+            ]}
     };
     grunt.registerTask('test', 'qunit');
     
