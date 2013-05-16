@@ -28,13 +28,13 @@ suggestions_data = [{
 	suggestions : [" t-shirt, jeans, leather shoes", " button-down shirt, jeans, leather shoes"]
 
 }, {
-	category : "familyevent",
-	event : "family",
+	category : "family",
+	event : "familyevent",
 	title: "Family Event",
 	suggestions : [" button-down shirt, jeans, sneakers","button-down shirt, khakis, sneakers"," t-shirt, khakis, sneakers"]
 
 },{
-	category : "Wedding",
+	category : "wedding",
 	event : "wedding",
 	title: "Wedding",
 	suggestions : ["black suit, dress shoes"," sports jacket, button-down shirt, dress shoes","t-shirt, shorts, sneakers","dark suit, dress shoes"]
@@ -70,25 +70,25 @@ suggestions_data = [{
 	suggestions : ["button-down shirt, jeans, sneakers", "button-down shirt, khakis, sneakers", "t-shirt, khakis, sneakers"]
 
 }, {
-	category : "Recreational",
+	category : "recreational",
 	event : "gymindoor",
 	title: "Recreational > Gym > Indoor",
 	suggestions : ["t-shirt, shorts, gym shoes"]
 
 }, {
-	category : "Recrational",
+	category : "recreational",
 	event : "gymoutdoor",
 	title: "Recreational > Gym > Outdooor",
 	suggestions : ["t-shirt, shorts, gym shoes"]
 
 }, {
-	category : "Recreational",
+	category : "recreational",
 	event : "beach",
 	title: "Recreational > Beach",
 	suggestions : ["t-shirt, swim trunks, sunglasses, flip-flops"]
 
 }, {
-	category : "Recreational",
+	category : "recreational",
 	event : "skiing",
 	title: "Recreational > Skiing",
 	suggestions : ["hat, ski-jacket, gloves, snow pants, ski boots"]
