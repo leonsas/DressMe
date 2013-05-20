@@ -17,11 +17,12 @@ function generateSuggestions(category, event){
 	}
 }
 	
-function displaySuggestion(){
+function displaySuggestion(indexOfSuggestion){
 	suggestion_params = getSuggestionParams()
 	suggestions =  generateSuggestions(suggestion_params.category, suggestion_params.event);
 	title = suggestions.title;
-	current_suggestion = suggestions.suggestions[0]
+	i = indexOfSuggestion%suggestions.suggestions.length
+	current_suggestion = suggestions.suggestions[i]
 	$("#suggestion_text").html("You could wear a " + current_suggestion + ".");
 	$('#category').html(title);
 	

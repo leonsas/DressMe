@@ -3,70 +3,94 @@ suggestions_data = [{
 	category : "business",
 	event : "interview",
 	title : "Business > Interview",
-	suggestions : ["button-down shirt, dress pants, dress shoes", "gray suit, tie, dress shoes"]
+	suggestions : ["button-down shirt, dress pants, dress shoes", "gray suit, tie, dress shoes"," light suit, tie, dress shoes"]
 }, {
 	category : "business",
 	event : "meeting",
 	title : "Business > Meeting with Peers",
-	suggestions : ["button-down shirt, jeans, sneakers", "button-down shirt, khakis, sneakers"]
+	suggestions : ["button-down shirt, jeans, sneakers", "button-down shirt, khakis, sneakers"," polo, khakis, dress shoes"]
 }, {
 	category : "business",
 	event : "casual",
-	title : "Business > Casual",
-	suggestions : ["t-shirt, jeans, sneakers", "button-down shirt, jeans, sneakers", "t-shirt, shorts, sneakers"]
+	title : "Business > Casual Friday",
+	suggestions : ["button-down, khakis, dress shoes", "button-down shirt, jeans, dress shoes"]
+
+},{
+	category : "business",
+	event : "formal",
+	title : "Business > Formal",
+	suggestions : [" black suit, dress shoes", "button-down shirt, dress shoes", "dark suit, dress shoes"]
 
 }, {
 	category : "business",
 	event : "happy",
 	title : "Business > Happy Hour",
-	suggestions : [" t-shirt, jeans, leather shoes", " button-down shirt, jeans, leather shoes", "button-down shirt, jeans, leather shoes"]
+	suggestions : [" t-shirt, jeans, leather shoes", " button-down shirt, jeans, leather shoes"]
 
 }, {
-	category : "goingout",
-	event : "date",
-	title: "Going Out > Date",
-	suggestions : [" button-down shirt, dress pants, leather shoes"]
+	category : "family",
+	event : "familyevent",
+	title: "Family Event",
+	suggestions : [" button-down shirt, jeans, sneakers","button-down shirt, khakis, sneakers"," t-shirt, khakis, sneakers"]
+
+},{
+	category : "wedding",
+	event : "wedding",
+	title: "Wedding",
+	suggestions : ["black suit, dress shoes"," sports jacket, button-down shirt, dress shoes","t-shirt, shorts, sneakers","dark suit, dress shoes"]
+
+},{
+	category : "casual",
+	event : "everyday",
+	title: "Casual > Everyday",
+	suggestions : ["t-shirt, jeans, sneakers","button-down shirt, jeans, sneakers","t-shirt, shorts, sneakers","long sleeve shirt, jeans, sneakers"]
 
 }, {
-	category : "goingout",
-	event : "clubbing",
-	title: "Going Out > Clubbing",
-	suggestions : ["polo shirt, belt, jeans, street sneakers"]
+	category : "commencement",
+	event : "commencement",
+	title: "Commencement",
+	suggestions : ["commencement gown, dress shirt, belt, khakis, leather shoes","button-down shirt, jeans, sneakers","t-shirt, shorts, sneakers","commencement gown, dress shirt, belt, dress pants, leather shoes"]
+
+},{
+	category : "eveningwear",
+	event : "formal",
+	title: "Evening Wear > Formal",
+	suggestions : ["button-down shirt, dress pants, leather shoes","dark suit, dress shoes", "light suit, dress shoes"]
 
 }, {
-	category : "goingout",
-	event : "semiformal",
-	title: "Going Out > Semi-Formal",
-	suggestions : ["button-down shirt, khakis, boat shoes"]
+	category : "eveningwear",
+	event : "nightclub",
+	title: "Evening Wear > Night Club",
+	suggestions : ["iridescent button-down shirt, dress pants, dress shoes"," trendy t-shirt, jeans, leather shoes"," sportcoat, t-shirt, leather shoes"]
 
 }, {
-	category : "goingout",
-	event : "bar",
-	title: "Going Out > Bar Hopping",
-	suggestions : [" button-down shirt, jeans, sneakers", "button-down shirt, khakis, sneakers", "t-shirt, khakis, sneakers"]
+	category : "eveningwear",
+	event : "pub",
+	title: "Evening Wear > Pub",
+	suggestions : ["button-down shirt, jeans, sneakers", "button-down shirt, khakis, sneakers", "t-shirt, khakis, sneakers"]
 
 }, {
-	category : "athletic",
-	event : "gym",
-	title: "Working Out > Gym",
+	category : "recreational",
+	event : "gymindoor",
+	title: "Recreational > Gym > Indoor",
 	suggestions : ["t-shirt, shorts, gym shoes"]
 
 }, {
-	category : "athletic",
-	event : "outdoor",
-	title: "Working Out > Outdooor",
+	category : "recreational",
+	event : "gymoutdoor",
+	title: "Recreational > Gym > Outdooor",
 	suggestions : ["t-shirt, shorts, gym shoes"]
 
 }, {
-	category : "traveling",
+	category : "recreational",
 	event : "beach",
-	title: "Traveling > Beach",
+	title: "Recreational > Beach",
 	suggestions : ["t-shirt, swim trunks, sunglasses, flip-flops"]
 
 }, {
-	category : "traveling",
+	category : "recreational",
 	event : "skiing",
-	title: "Traveling > Skiing",
+	title: "Recreational > Skiing",
 	suggestions : ["hat, ski-jacket, gloves, snow pants, ski boots"]
 
 }]

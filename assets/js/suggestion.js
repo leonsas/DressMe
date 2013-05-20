@@ -2,6 +2,7 @@ function getURLParameter(name) {
 	return decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]);
 }
 
+var currentSuggestionIndex = 0;
 var geocoder;
 $(function() {
 	/*
@@ -62,8 +63,15 @@ $(function() {
 
 	};
 
+	$("#nextSuggestion").click(
+		function (){
+			currentSuggestionIndex+=1;
+			displaySuggestion(currentSuggestionIndex);
+		}
+		)
+
 	
-	displaySuggestion()
+	displaySuggestion(0);
 	getGeoLocation();
 });
 
