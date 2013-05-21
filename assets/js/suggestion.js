@@ -90,6 +90,10 @@ $(function() {
 	
 	displaySuggestion(0);
 	getGeoLocation();
+	params = getSuggestionParams()
+	category = params.category;
+	event = params.category;
+	getImgsForEvent(category,category); //fix this to actually use category and event;
 });
 
 

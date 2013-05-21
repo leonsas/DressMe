@@ -75,3 +75,29 @@ function saveImgURLToParse(url, category, event) {
 	});
 
 }
+
+function getImgsForEvent(category, event) {
+	var image = Parse.Object.extend("image");
+	var query = new Parse.Query(image);
+	query.equalTo("category", category);
+	query.find({
+		success : function(results) {
+			
+			for(i =0;i<results.length;i++){
+				url = results[i].get("img_url")
+				console.log(url);
+				setCrowdsourcedImg(url);
+			}
+				
+		},
+		error : function(error) {
+			alert("Error: " + error.code + " " + error.message);
+		}
+	});
+}
+
+
+function setCrowdsourcedImg(url){
+	$("#crowdsourced_img_placeholder").attr("src",url);
+	
+}
