@@ -4,6 +4,8 @@ function getURLParameter(name) {
 
 var currentSuggestionIndex = 0;
 var geocoder;
+var img_urls = [];
+var currImgIndex = 0;
 $(function() {
 	var file;
 
@@ -82,11 +84,17 @@ $(function() {
 
 	$("#nextSuggestion").click(
 		function (){
-			currentSuggestionIndex+=1;
+			currImgIndex+=1;
 			displaySuggestion(currentSuggestionIndex);
 		}
 		)
-
+	
+	$("#next_img").click(
+		function (){
+			currentSuggestionIndex+=1;
+			setCrowdsourcedImg(currentSuggestionIndex);
+		}
+		)
 	
 	displaySuggestion(0);
 	getGeoLocation();
@@ -94,6 +102,7 @@ $(function() {
 	category = params.category;
 	event = params.category;
 	getImgsForEvent(category,category); //fix this to actually use category and event;
+	
 });
 
 

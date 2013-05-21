@@ -86,9 +86,10 @@ function getImgsForEvent(category, event) {
 			for(i =0;i<results.length;i++){
 				url = results[i].get("img_url")
 				console.log(url);
-				setCrowdsourcedImg(url);
-			}
 				
+				img_urls.push(url);
+			}
+				setCrowdsourcedImg(0);
 		},
 		error : function(error) {
 			alert("Error: " + error.code + " " + error.message);
@@ -97,7 +98,8 @@ function getImgsForEvent(category, event) {
 }
 
 
-function setCrowdsourcedImg(url){
+function setCrowdsourcedImg(img_index){
+	url = img_urls[img_index];
 	$("#crowdsourced_img_placeholder").attr("src",url);
 	
 }
