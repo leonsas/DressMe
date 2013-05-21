@@ -1,34 +1,37 @@
-
-function getSuggestionParams(){
-		category = getURLParameter('category');
-		event = getURLParameter('event');
-	return {event: event, category: category}
+function getSuggestionParams() {
+	category = getURLParameter('category');
+	event = getURLParameter('event');
+	return {
+		event : event,
+		category : category
+	}
 }
 
-function generateSuggestions(category, event){
-		for (i in suggestions_data) {
+function generateSuggestions(category, event) {
+	for (i in suggestions_data) {
 
 		if (suggestions_data[i].category == category && suggestions_data[i].event == event) {
 			current_suggestions = suggestions_data[i].suggestions;
 			title = suggestions_data[i].title;
-			return {suggestions: current_suggestions, title: title}
+			return {
+				suggestions : current_suggestions,
+				title : title
+			}
 		}
 
 	}
 }
-	
-function displaySuggestion(indexOfSuggestion){
+
+function displaySuggestion(indexOfSuggestion) {
 	suggestion_params = getSuggestionParams()
-	suggestions =  generateSuggestions(suggestion_params.category, suggestion_params.event);
+	suggestions = generateSuggestions(suggestion_params.category, suggestion_params.event);
 	title = suggestions.title;
-	i = indexOfSuggestion%suggestions.suggestions.length
+	i = indexOfSuggestion % suggestions.suggestions.length
 	current_suggestion = suggestions.suggestions[i]
 	$("#suggestion_text").html("You could wear a " + current_suggestion + ".");
 	$('#category').html(title);
-	
+
 }
-
-
 
 function displayWeatherAccesories(currentTemp, icon_type) {
 	console.log(currentTemp);
@@ -53,3 +56,22 @@ function displayWeatherAccesories(currentTemp, icon_type) {
 		$('#weather_accessory_suggestion').html(accessory_string);
 	}
 };
+
+function saveImgURLToParse(url, category, event) {
+	var image = Parse.Object.extend("image");
+	var curr_img = new image();
+
+	curr_img.set("img_url", url);
+	curr_img.set("category", category);
+	curr_img.set("event", event);
+	curr_img.save(null, {
+		success : function(curr_img) {
+			// The object was saved successfully.
+		},
+		error : function(curr_img, error) {
+			// The save failed.
+			// error is a Parse.Error with an error code and description.
+		}
+	});
+
+}

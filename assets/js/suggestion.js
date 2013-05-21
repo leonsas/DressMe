@@ -5,28 +5,45 @@ function getURLParameter(name) {
 var currentSuggestionIndex = 0;
 var geocoder;
 $(function() {
-	/*
-	function initialize() {
-	geocoder = new google.maps.Geocoder();
-	}
+	var file;
 
-	function codeLatLng(lat, lng) {
-	var latlng = new google.maps.LatLng(lat, lng);
-	geocoder.geocode({
-	'latLng' : latlng
-	}, function(results, status) {
-	if (status == google.maps.GeocoderStatus.OK) {
-	if (results[1]) {
-	$('#current_location').text(results[2].formatted_address);
-	} else {
-	console.log('No results found');
-	}
-	} else {
-	console.log('Geocoder failed due to: ' + status);
-	}
-	});
-	}
-	*/
+    // Set an event listener on the Choose File field.
+    $('#fileselect').bind("change", function(e) {
+      var files = e.target.files || e.dataTransfer.files;
+      // Our file var now holds the selected file
+      file = files[0];
+    });
+
+    // This function is called when the user clicks on Upload to Parse. It will create the REST API request to upload this image to Parse.
+    $('#uploadbutton').click(function() {
+      var serverUrl = 'https://api.parse.com/1/files/' + file.name;
+
+      $.ajax({
+        type: "POST",
+        beforeSend: function(request) {
+          request.setRequestHeader("X-Parse-Application-Id", 'd9N02qR3uEwbrZQzYeRYAnhJz3EpdSpoUOwBEdMc');
+          request.setRequestHeader("X-Parse-REST-API-Key", 'KtccQjx5qh1QyP5Uvjb6GBl79GuoKZ8Y0paoiSvI');
+          request.setRequestHeader("Content-Type", file.type);
+        },
+        url: serverUrl,
+        data: file,
+        processData: false,
+        contentType: false,
+        success: function(data) {
+          console.log("File available at: " + data.url);
+          params = getSuggestionParams()
+          category = params.category;
+          event = params.event;
+          saveImgURLToParse(data.url, category, event);
+        },
+        error: function(data) {
+          var obj = jQuery.parseJSON(data);
+          alert(obj.error);
+        }
+      });
+    });
+
+
 	//key from forecast.io
 	var baseURL = 'https://api.forecast.io/forecast/fc590758007d8f0eb51877e6883ffda1/';
 
