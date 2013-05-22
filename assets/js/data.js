@@ -30,14 +30,14 @@ suggestions_data = [{
 	images : [["t-shirt","jeans","leather_shoes"],["button-down_shirt","jeans","leather_shoes"]]
 }, {
 	category : "family",
-	event : "familyevent",
-	title: "Family Event",
+	event : "reunion",
+	title: "Family > Reunion",
 	suggestions : ["button-down shirt, jeans, sneakers","button-down shirt, khakis, sneakers"," t-shirt, khakis, sneakers"],
 	images : [["button-down_shirt","jeans","sneakers"],["button-down_shirt","khakis","sneakers"],["t-shirt","khakis","sneakers"]]
 },{
-	category : "wedding",
+	category : "family",
 	event : "wedding",
-	title: "Wedding",
+	title: "Family > Wedding",
 	suggestions : ["black suit, dress shoes"," sports jacket, button-down shirt, dress shoes","t-shirt, shorts, sneakers","dark suit, dress shoes"],
 	images : [["black_suit","dress_shoes",],["sports_jacket","button-down_shirt","dress_shoes"],["t-shirt","shorts","sneakers"],["dark_suit","dress_shoes"]]
 },{
@@ -47,9 +47,9 @@ suggestions_data = [{
 	suggestions : ["t-shirt, jeans, sneakers","button-down shirt, jeans, sneakers","t-shirt, shorts, sneakers","long sleeve shirt, jeans, sneakers"],
 	images : [["t-shirt","jeans","sneakers"],["button-down_shirt","jeans","sneakers"],["t-shirt","shorts","sneakers"],["long_sleeve_shirt","jeans","sneakers"]]
 }, {
-	category : "commencement",
+	category : "family",
 	event : "commencement",
-	title: "Commencement",
+	title: "Family > Commencement",
 	suggestions : ["commencement gown, dress shirt, belt, khakis, leather shoes","button-down shirt, jeans, sneakers","t-shirt, shorts, sneakers","commencement gown, dress shirt, belt, dress pants, leather shoes"],
 	images : [["commencement_gown","long_sleeve_shirt","belt","khakis","leather_shoes"],["button-down_shirt","jeans","sneakers"],["t-shirt","shorts","sneakers"],["commencement_gown","long_sleeve_shirt","belt","dress_pants","leather_shoes"]]
 },{
