@@ -77,9 +77,12 @@ function saveImgURLToParse(url, category, event) {
 }
 
 function getImgsForEvent(category, event) {
+	
 	var image = Parse.Object.extend("image");
 	var query = new Parse.Query(image);
 	query.equalTo("category", category);
+	query.equalTo("event", event);
+	console.log("querying for:" + event + " " + category);
 	query.find({
 		success : function(results) {
 			

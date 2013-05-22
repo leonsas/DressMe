@@ -100,8 +100,8 @@ $(function() {
 	getGeoLocation();
 	params = getSuggestionParams()
 	category = params.category;
-	event = params.category;
-	getImgsForEvent(category,category); //fix this to actually use category and event;
+	event = params.event;
+	getImgsForEvent(category,event); //fix this to actually use category and event;
 	
 });
 
