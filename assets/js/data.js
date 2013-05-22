@@ -104,33 +104,39 @@ condition_accesories = [{
 temperature_accesories = [{
 	temp_range : [-100, 20],
 	suggestion : {
-		business : 'warm peacoat',
-		goingout : 'heavy jacket',
-		athletic : 'warm jacket',
-
+		business : 'warm peacoat. It is cold outside',
+		family : 'heavy coat.It is cold outside',
+		casual : 'heavy coat. It is cold outside',
+		eveningwear : 'heavy jacket. It is cold outside',
+		recreational : 'warm jacket. It is cold outside'
 	}
 }, {
 	temp_range : [20, 40],
 	suggestion : {
-		business : 'warm peacoat',
-		goingout : 'leather jacket',
-		athletic : 'warm workout suit',
-
+		business : 'warm peacoat. It is chilly outside',
+		family : 'warm coat. It is chilly outside',
+		casual : 'warm coat.It is chilly outside',
+		eveningwear : 'leather jacket. It is chilly outside',
+		recreational : 'warm workout suit. It is chilly outside',
 	}
 }, {
 	temp_range : [40, 60],
 	suggestion : {
-		business : 'light blazer',
-		goingout : 'leather jacket',
-		athletic : 'sweatshirt',
+		business : ' light blazer. It is slightly chilly outside',
+		family : 'warm jacket. It is slightly chilly outside',
+		causual : 'jacket. It is slightly chilly outside',
+		eveningwear : 'leather jacket. It is slightly chilly outside',
+		recreational : 'sweatshirt. It is slightly chilly outside',
 
 	}
 }, {
 	temp_range : [60, 140],
 	suggestion : {
 		business : 'It might get chilly later, bring a light blazer.',
-		goingout : 'It might get chilly later, bring a light jacket.',
-		athletic : 'It might get chilly later, bring a light sweathshirt.',
+		family : 'It might get chilly later, bring a light jacket.',
+		casual : 'It might get chilly later, bring a sweatshirt.',
+		eveningwear : 'It might get chilly later, bring a light jacket.',
+		recreational : 'It might get chilly later, bring a light sweathshirt.',
 
 	}
 }];
