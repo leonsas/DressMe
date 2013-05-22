@@ -85,7 +85,7 @@ $(function() {
 	$("#nextSuggestion").click(
 		function (){
 			currImgIndex+=1;
-			displaySuggestion(currentSuggestionIndex);
+			displaySuggestion(currImgIndex);
 		}
 		)
 	

@@ -13,9 +13,11 @@ function generateSuggestions(category, event) {
 		if (suggestions_data[i].category == category && suggestions_data[i].event == event) {
 			current_suggestions = suggestions_data[i].suggestions;
 			title = suggestions_data[i].title;
+			picture_names = suggestions_data[i].images;
 			return {
 				suggestions : current_suggestions,
-				title : title
+				title : title,
+				images: picture_names
 			}
 		}
 
@@ -28,9 +30,15 @@ function displaySuggestion(indexOfSuggestion) {
 	title = suggestions.title;
 	i = indexOfSuggestion % suggestions.suggestions.length
 	current_suggestion = suggestions.suggestions[i]
+	picture_titles = suggestions.images[i]
 	$("#suggestion_text").html("You could wear a " + current_suggestion + ".");
 	$('#category').html(title);
-
+	var imageHTML = '';
+	for (j in picture_titles)
+	{
+	imageHTML = imageHTML + "<img src=\"assets/img/" + picture_titles[j] + ".jpg\">";
+	}
+	$("#pictures").html(imageHTML);
 }
 
 function displayWeatherAccesories(currentTemp, icon_type) {
