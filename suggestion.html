@@ -9,63 +9,58 @@
 
 		<!-- Bootstrap -->
 		<link href="assets/css/bootstrap.css" rel="stylesheet" media="screen">
-			    <style type="text/css">
+		<style type="text/css">
+			/* Sticky footer styles
+			 -------------------------------------------------- */
 
-      /* Sticky footer styles
-      -------------------------------------------------- */
+			html, body {
+				height: 100%;
+				/* The html and body elements cannot have any padding or margin. */
+			}
 
-      html,
-      body {
-        height: 100%;
-        /* The html and body elements cannot have any padding or margin. */
-      }
+			/* Wrapper for page content to push down footer */
+			#wrap {
+				min-height: 100%;
+				height: auto !important;
+				height: 100%;
+				/* Negative indent footer by it's height */
+				margin: 0 auto -60px;
+			}
 
-      /* Wrapper for page content to push down footer */
-      #wrap {
-        min-height: 100%;
-        height: auto !important;
-        height: 100%;
-        /* Negative indent footer by it's height */
-        margin: 0 auto -60px;
-      }
+			/* Set the fixed height of the footer here */
+			#push, #footer {
+				height: 60px;
+			}
+			#footer {
+				background-color: #f5f5f5;
+			}
 
-      /* Set the fixed height of the footer here */
-      #push,
-      #footer {
-        height: 60px;
-      }
-      #footer {
-        background-color: #f5f5f5;
-      }
+			/* Lastly, apply responsive CSS fixes as necessary */
+			@media (max-width: 767px) {
+				#footer {
+					margin-left: -20px;
+					margin-right: -20px;
+					padding-left: 20px;
+					padding-right: 20px;
+				}
+			}
 
-      /* Lastly, apply responsive CSS fixes as necessary */
-      @media (max-width: 767px) {
-        #footer {
-          margin-left: -20px;
-          margin-right: -20px;
-          padding-left: 20px;
-          padding-right: 20px;
-        }
-      }
+			/* Custom page CSS
+			 -------------------------------------------------- */
+			/* Not required for template or sticky footer method. */
 
+			#wrap > .container {
+				padding-top: 60px;
+			}
+			.container .credit {
+				margin: 20px 0;
+			}
 
+			code {
+				font-size: 80%;
+			}
 
-      /* Custom page CSS
-      -------------------------------------------------- */
-      /* Not required for template or sticky footer method. */
-
-      #wrap > .container {
-        padding-top: 60px;
-      }
-      .container .credit {
-        margin: 20px 0;
-      }
-
-      code {
-        font-size: 80%;
-      }
-
-    </style>
+		</style>
 
 		<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 
@@ -83,7 +78,7 @@
 		<div id="wrap">
 			<div class="navbar navbar-fixed-top">
 				<div class="navbar-inner">
-					<div class="container">						
+					<div class="container">
 						<a class="brand" href="index.html">Dress Me |</a>
 						<p class="brand" id="current_feels_like" href="#"></p>
 					</div>
@@ -94,37 +89,46 @@
 				<a href="/"><h3 id="category"></h3></a>
 				<p id="suggestion_text"></p>
 				<p id="weather_accessory_suggestion"></p>
-				<button class="btn" id="nextSuggestion">Another Suggestion</button>
+				<button class="btn" id="nextSuggestion">
+					Another Suggestion
+				</button>
 				<div class="container" id="pictures"></div>
 			</div>
 
 			<div class="container">
 				<hr>
 				<h3>Add Your Own Suggestion</h3>
-				<div><button class="btn" id="next_img">Next image</button></div>
+				<h1 style="text-align:center;">
+				<button class="btn offset5 img_btn " id="previous_img" >
+					<i class="icon-arrow-left"></i>
+				</button>
+				<button class="btn img_btn" id="next_img">
+					<i class="icon-arrow-right"></i>
+				</button></h1>
 				<br>
 				<img src="" id="crowdsourced_img_placeholder"></img>
 				<form id="fileupload" name="fileupload" enctype="multipart/form-data" method="post">
-			<fieldset>
-				<input type="file"  name="fileselect" id="fileselect">
-				</input>
-				<input id="uploadbutton" type="button" class="btn" value="Upload"/>
-			</fieldset>
-	</form>
-		
-		<script type="text/javascript">
-			Parse.initialize("d9N02qR3uEwbrZQzYeRYAnhJz3EpdSpoUOwBEdMc", "vXmAVP3pU8T9MQvYCbK1LJcIJBSZ3B1ehrUZdggP")
-			
+					<fieldset>
+						<input type="file"  name="fileselect" id="fileselect">
+						</input>
+						<input id="uploadbutton" type="button" class="btn" value="Upload"/>
+					</fieldset>
+					<div class="alert alert-success" id="picture_uploaded_alert" style="display:none;">
+						Picture uploaded succesful!
+					</div>
+				</form>
 
-		</script>
-			
+				<script type="text/javascript">
+					Parse.initialize("d9N02qR3uEwbrZQzYeRYAnhJz3EpdSpoUOwBEdMc", "vXmAVP3pU8T9MQvYCbK1LJcIJBSZ3B1ehrUZdggP")
+
+				</script>
+
 			</div>
 			<div id="push"></div>
 		</div>
 
 		<div class="footer">
-		<a href="http://forecast.io/#/f/42.0580,-87.6749">Powered by Forecast.io</a> | 
-		<a href="http://macys.com">Photos by Macys</a>
+			<a href="http://forecast.io/#/f/42.0580,-87.6749">Powered by Forecast.io</a> | <a href="http://macys.com">Photos by Macys</a>
 		</div>
 	</body>
 

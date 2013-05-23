@@ -75,10 +75,13 @@ function saveImgURLToParse(url, category, event) {
 	curr_img.save(null, {
 		success : function(curr_img) {
 			// The object was saved successfully.
+			console.log("Picture uploaded succesufly");
+			$("#picture_uploaded_alert").css('display','inline');
 		},
 		error : function(curr_img, error) {
 			// The save failed.
 			// error is a Parse.Error with an error code and description.
+			console.log("Error creating parse obj: "+ error)
 		}
 	});
 
@@ -110,6 +113,7 @@ function getImgsForEvent(category, event) {
 
 
 function setCrowdsourcedImg(img_index){
+	img_index = img_index % img_urls.length;
 	url = img_urls[img_index];
 	$("#crowdsourced_img_placeholder").attr("src",url);
 	

@@ -96,6 +96,12 @@ $(function() {
 		}
 		)
 	
+	$("#previous_img").click(
+		function (){
+			currentSuggestionIndex-=1;
+			setCrowdsourcedImg(currentSuggestionIndex);
+		}
+		)
 	displaySuggestion(0);
 	getGeoLocation();
 	params = getSuggestionParams()
