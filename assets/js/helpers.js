@@ -43,6 +43,7 @@ function displaySuggestion(indexOfSuggestion) {
 
 function displayWeatherAccesories(currentTemp, icon_type) {
 	console.log(currentTemp);
+	console.log(icon_type);
 	category = getURLParameter('category');
 	var accessory = '';
 	for (i in temperature_accesories) {
@@ -54,12 +55,27 @@ function displayWeatherAccesories(currentTemp, icon_type) {
 			break;
 		}
 	}
-	console.log("accessory: " + accessory)
+
+	for (i in condition_accessories){
+		if (icon_type == "rain") {
+			console.log(i + " " + icon_type);
+			console.log(category);
+			console.log(condition_accessories[i]);
+			condition_accessory = condition_accessories[i].suggestion;
+			break;
+		}
+	}
+
+	console.log("accessory: " + accessory);
+
 	if (accessory != '' && accessory != undefined) {
 		if (currentTemp > 61) {
 			accessory_string = accessory;
 		} else {
 			accessory_string = "Don't forget your " + accessory + "!";
+		}
+		if (icon_type == "rain"){
+			accessory_string = accessory_string + "<br>And don't forget your " + condition_accessory + "!";
 		}
 		$('#weather_accessory_suggestion').html(accessory_string);
 	}

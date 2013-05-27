@@ -96,7 +96,7 @@ suggestions_data = [{
 	images : [["hat","ski_jacket","gloves","snow_pants","ski_boots"]]
 }]
 
-condition_accesories = [{
+condition_accessories = [{
 	condition : 'rain',
 	suggestion : ['umbrella']
 }];
@@ -140,3 +140,5 @@ temperature_accesories = [{
 
 	}
 }];
+
+
