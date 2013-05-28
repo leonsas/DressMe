@@ -99,7 +99,11 @@ suggestions_data = [{
 condition_accessories = [{
 	condition : 'rain',
 	suggestion : ['umbrella']
-}];
+}, {
+	condition : 'snow',
+	suggestion : ['hat, gloves, and scarf']
+}
+];
 
 temperature_accesories = [{
 	temp_range : [-100, 20],

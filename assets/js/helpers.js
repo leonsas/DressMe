@@ -44,6 +44,7 @@ function displaySuggestion(indexOfSuggestion) {
 function displayWeatherAccesories(currentTemp, icon_type) {
 	console.log(currentTemp);
 	console.log(icon_type);
+	
 	category = getURLParameter('category');
 	var accessory = '';
 	for (i in temperature_accesories) {
@@ -57,7 +58,7 @@ function displayWeatherAccesories(currentTemp, icon_type) {
 	}
 
 	for (i in condition_accessories){
-		if (icon_type == "rain") {
+		if (icon_type == condition_accessories[i].condition) {
 			console.log(i + " " + icon_type);
 			console.log(category);
 			console.log(condition_accessories[i]);
@@ -74,8 +75,9 @@ function displayWeatherAccesories(currentTemp, icon_type) {
 		} else {
 			accessory_string = "Don't forget your " + accessory + "!";
 		}
-		if (icon_type == "rain"){
-			accessory_string = accessory_string + "<br>And don't forget your " + condition_accessory + "!";
+		if (icon_type == "rain" || icon_type == "snow"){
+			accessory_string = accessory_string + "<br>And don't forget your " + condition_accessory +
+			 " because it might " + icon_type +"!";
 		}
 		$('#weather_accessory_suggestion').html(accessory_string);
 	}
