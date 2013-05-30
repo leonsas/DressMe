@@ -36,7 +36,7 @@ function displaySuggestion(indexOfSuggestion) {
 	var imageHTML = '';
 	for (j in picture_titles)
 	{
-	imageHTML = imageHTML + "<img src=\"assets/img/" + picture_titles[j] + ".jpg\">";
+	imageHTML = imageHTML + "<img src=\"/assets/img/" + picture_titles[j] + ".jpg\">";
 	}
 	$("#pictures").html(imageHTML);
 }

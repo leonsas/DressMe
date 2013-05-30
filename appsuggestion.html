@@ -8,7 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 		<!-- Bootstrap -->
-		<link href="assets/css/bootstrap.css" rel="stylesheet" media="screen">
+		<link href="/assets/css/bootstrap.css" rel="stylesheet" media="screen">
 		<style type="text/css">
 			/* Sticky footer styles
 			 -------------------------------------------------- */
@@ -62,16 +62,16 @@
 
 		</style>
 
-		<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
 
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-		<script src="assets/js/jquery.cookie.js"></script>
-		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="/assets/js/jquery.cookie.js"></script>
+		<script src="/assets/js/bootstrap.min.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 		<script src="http://www.parsecdn.com/js/parse-1.2.7.min.js"></script>
-		<script src="assets/js/helpers.js"></script>
-		<script src="assets/js/data.js"></script>
-		<script src="assets/js/suggestion.js"></script>
+		<script src="/assets/js/helpers.js"></script>
+		<script src="/assets/js/data.js"></script>
+		<script src="/assets/js/appsuggestion.js"></script>
 	</head>
 
 	<body>
@@ -95,35 +95,6 @@
 				<div class="container" id="pictures"></div>
 			</div>
 
-			<div class="container">
-				<hr>
-				<h3>Add Your Own Suggestion</h3>
-				<h1 style="text-align:center;">
-				<button class="btn offset5 img_btn " id="previous_img" >
-					<i class="icon-arrow-left"></i>
-				</button>
-				<button class="btn img_btn" id="next_img">
-					<i class="icon-arrow-right"></i>
-				</button></h1>
-				<br>
-				<img src="" id="crowdsourced_img_placeholder"></img>
-				<form id="fileupload" name="fileupload" enctype="multipart/form-data" method="post">
-					<fieldset>
-						<input type="file"  name="fileselect" id="fileselect">
-						</input>
-						<input id="uploadbutton" type="button" class="btn" value="Upload"/>
-					</fieldset>
-					<div class="alert alert-success" id="picture_uploaded_alert" style="display:none;">
-						Picture uploaded succesful!
-					</div>
-				</form>
-
-				<script type="text/javascript">
-					Parse.initialize("d9N02qR3uEwbrZQzYeRYAnhJz3EpdSpoUOwBEdMc", "vXmAVP3pU8T9MQvYCbK1LJcIJBSZ3B1ehrUZdggP")
-
-				</script>
-
-			</div>
 			<div id="push"></div>
 		</div>
 
