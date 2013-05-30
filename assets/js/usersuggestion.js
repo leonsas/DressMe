@@ -23,8 +23,8 @@ $(function() {
       $.ajax({
         type: "POST",
         beforeSend: function(request) {
-          request.setRequestHeader("X-Parse-Application-Id", 'd9N02qR3uEwbrZQzYeRYAnhJz3EpdSpoUOwBEdMc');
-          request.setRequestHeader("X-Parse-REST-API-Key", 'KtccQjx5qh1QyP5Uvjb6GBl79GuoKZ8Y0paoiSvI');
+          request.setRequestHeader("X-Parse-Application-Id", 'sN8c1dHWntZ7BJQTLrRydYGmXqE3oYRKCBk99NdE');
+          request.setRequestHeader("X-Parse-REST-API-Key", 'EWROsLb90PUOTq4S4gurZ9leDFDUdjryIxWPXCpZ');
           request.setRequestHeader("Content-Type", file.type);
         },
         url: serverUrl,
