@@ -46,8 +46,8 @@ $(function() {
 
 	$("#nextSuggestion").click(
 		function (){
-			currImgIndex+=1;
-			displaySuggestion(currImgIndex);
+			currentSuggestionIndex+=1;
+			displaySuggestion(currentSuggestionIndex);
 		}
 		)
 	
