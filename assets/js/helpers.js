@@ -111,6 +111,7 @@ function getImgsForEvent(category, event) {
 	var query = new Parse.Query(image);
 	query.equalTo("category", category);
 	query.equalTo("event", event);
+	query.descending("thumbs_up");
 	console.log("querying for:" + event + " " + category);
 	query.find({
 		success : function(results) {
@@ -120,6 +121,7 @@ function getImgsForEvent(category, event) {
 				console.log(url);
 				
 				img_urls.push(url);
+				parseImages.push(results[i]);
 			}
 				setCrowdsourcedImg(0);
 		},
@@ -131,8 +133,11 @@ function getImgsForEvent(category, event) {
 
 
 function setCrowdsourcedImg(img_index){
+	$("#thumbsUp").prop("disabled",false);
+	$("#thumbsDown").prop("disabled",false);
 	img_index = img_index % img_urls.length;
 	url = img_urls[img_index];
 	$("#crowdsourced_img_placeholder").attr("src",url);
-	
+	$("#upCount").text(parseImages[img_index].get("thumbs_up"));
+	$("#downCount").text(parseImages[img_index].get("thumbs_down"));
 }

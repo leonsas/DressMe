@@ -7,6 +7,7 @@ var geocoder;
 var img_urls = [];
 var currImgIndex = 0;
 var geocoder;
+var parseImages = [];
 
 $(function() {
 	var file;
@@ -81,21 +82,50 @@ $(function() {
           alert(obj.error);
         }
       });
-    });
-
-
+    }
+	);
 	
+	$('#thumbsUp').click(function() {
+		currObject = parseImages[currImgIndex];
+		currObject.increment('thumbs_up');
+		currObject.save(null,{
+    success: function(updatedObj) {
+      $("#upCount").text(updatedObj.get("thumbs_up"));
+	  $("#thumbsUp").prop("disabled",true);
+	  $("#thumbsDown").prop("disabled",true);
+    },
+    error: function(error) {
+      $("#feedback_alert").css('display','inline');
+    }
+  });
+	});
+	
+	$('#thumbsDown').click(function() {
+		currObject = parseImages[currImgIndex];
+		currObject.increment('thumbs_down');
+		currObject.save(null,{
+    success: function(updatedObj) {
+      $("#downCount").text(updatedObj.get("thumbs_down"));
+	  $("#thumbsUp").prop("disabled",true);
+	  $("#thumbsDown").prop("disabled",true);
+    },
+    error: function() {
+      $("#feedback_alert").css('display','inline');
+    }
+  });
+	});
+	 
 	$("#next_img").click(
 		function (){
-			currentSuggestionIndex+=1;
-			setCrowdsourcedImg(currentSuggestionIndex);
+			currImgIndex+=1;
+			setCrowdsourcedImg(currImgIndex);
 		}
 		)
 	
 	$("#previous_img").click(
 		function (){
 			currentSuggestionIndex-=1;
-			setCrowdsourcedImg(currentSuggestionIndex);
+			setCrowdsourcedImg(currImgIndex);
 		}
 		)
   getGeoLocation();
